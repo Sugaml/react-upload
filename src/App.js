@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, ChakraProvider, Container } from "@chakra-ui/react";
+import Axios from "axios";
+import Upload from "./components/Upload";
+
+Axios.defaults.baseURL = "http://localhost:4000";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Box
+        minH="100vh"
+        w="100%"
+        bg="gray.200"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Container maxWidth="container.xl">
+          <Upload />
+        </Container>
+      </Box>
+    </ChakraProvider>
   );
 }
 
 export default App;
+
+
+
