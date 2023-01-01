@@ -24,7 +24,7 @@ function Upload() {
         onChange={handleChangeImage}
       />
       <VStack>
-        <Heading>Image uploading using Golang and Reactjs</Heading>
+        <Heading>Image upload</Heading>
         <Button
           onClick={() => imageRef.current.click()}
           colorScheme="blue"
